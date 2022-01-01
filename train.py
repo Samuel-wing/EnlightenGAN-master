@@ -6,6 +6,7 @@ from models.models import create_model
 from util.visualizer import Visualizer
 
 def get_config(config):
+    #将参数配置保存到stream中
     import yaml
     with open(config, 'r') as stream:
         return yaml.load(stream)
