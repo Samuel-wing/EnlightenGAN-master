@@ -438,7 +438,7 @@ class SingleModel(BaseModel):
                                 ('latent_show', latent_show), ('real_B', real_B), ('real_patch', real_patch),
                                 ('fake_patch', fake_patch), ('input_patch', input_patch)])
                     else:
-                        self_attention = util.atten2im(self.real_A_gray.data)
+                        self_attention = util.atten2im(self.real_A_gray.data)  #自注意
                         return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('latent_real_A', latent_real_A),
                                 ('latent_show', latent_show), ('real_B', real_B), ('real_patch', real_patch),
                                 ('fake_patch', fake_patch), ('input_patch', input_patch), ('self_attention', self_attention)])
